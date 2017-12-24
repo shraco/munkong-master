@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.controller.FinishEditController">
+   <children>
+      <Text layoutX="40.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="แก้ไขสายรถเรียบร้อย" />
+      <Button layoutX="82.0" layoutY="61.0" mnemonicParsing="false" onAction="#onOKButtonClicked" text="OK" />
+   </children>
+</AnchorPane>

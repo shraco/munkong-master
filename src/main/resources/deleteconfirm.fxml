@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.controller.DeleteConfirmController">
+   <children>
+      <Text layoutX="44.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ยืนยันการลบสายรถนี้" />
+      <Button fx:id="deleteButton" layoutX="149.0" layoutY="61.0" mnemonicParsing="false" onAction="#onDeleteButtonHandler" text="ลบ" />
+      <Button fx:id="cancelButton" layoutX="72.0" layoutY="61.0" mnemonicParsing="false" onAction="#onCancelButtonHandler" text="ยกเลิก" />
+   </children>
+</AnchorPane>

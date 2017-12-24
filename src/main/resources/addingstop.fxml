@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.controller.AddingStopController">
+   <children>
+      <AnchorPane prefHeight="106.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="29.0" layoutY="18.0" text="เพิ่มเส้นทางการเดินรถ">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="58.0" text="ป้ายที่จอด">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="247.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="20.0" prefHeight="40.0" prefWidth="89.0" text="ชื่อป้าย :    ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameField" layoutX="151.0" layoutY="30.0" prefHeight="25.0" prefWidth="197.0" />
+                  <Label layoutX="387.0" layoutY="7.0" prefHeight="40.0" prefWidth="205.0" text="ป้ายที่จอดเป็นต้นทาง">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorNameLabel" layoutX="27.0" layoutY="58.0" text="*กรุณาระบุชื่อป้าย" textFill="#f50303" visible="false" />
+                  <Label layoutX="387.0" layoutY="48.0" text="หรือไม่">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="14.0" prefHeight="40.0" prefWidth="110.0" text="ชื่ออื่น (ถ้ามี) :">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="otherNameField" layoutX="151.0" layoutY="21.0" prefHeight="25.0" prefWidth="197.0" />
+                  <RadioButton fx:id="sourceButton" layoutX="394.0" layoutY="5.0" mnemonicParsing="false" text="ใช่" />
+                  <RadioButton fx:id="notSourceButton" layoutX="394.0" layoutY="47.0" mnemonicParsing="false" text="ไม่ใช่" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="26.0" layoutY="14.0" prefHeight="40.0" prefWidth="81.0" text="ตำแหน่ง :">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="locationField" layoutX="149.0" layoutY="21.0" prefHeight="25.0" prefWidth="197.0" />
+                  <Label fx:id="errorLocationLabel" layoutX="26.0" layoutY="47.0" text="*กรุณาระบุตำแหน่งของป้าย" textFill="#f20101" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="73.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="confirmButton" layoutX="472.0" layoutY="13.0" mnemonicParsing="false" onAction="#onConfirmButtonHandler" prefHeight="40.0" prefWidth="78.0" text="ยืนยัน" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

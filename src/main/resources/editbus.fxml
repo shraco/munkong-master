@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system.controller.EditBusController">
+   <children>
+      <FlowPane alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
+         <children>
+            <Label text="สายรถ    ">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="busNoField" prefHeight="25.0" prefWidth="85.0" />
+         </children>
+      </FlowPane>
+      <FlowPane alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
+         <children>
+            <Label text="ต้นทาง    ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sourceField" disable="true" editable="false" />
+            <Label text="  ปลายทาง    ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="destinationField" disable="true" editable="false" />
+         </children>
+      </FlowPane>
+      <AnchorPane prefHeight="60.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="addButton" layoutX="419.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAddButtonClicked" text="เพิ่ม" />
+            <Button fx:id="editButton" layoutX="471.0" layoutY="14.0" mnemonicParsing="false" onAction="#onEditButtonClicked" text="แก้ไข" />
+            <Button fx:id="deleteButton" layoutX="530.0" layoutY="14.0" mnemonicParsing="false" onAction="#onDeleteButtonClicked" text="ลบ" />
+            <Button fx:id="moveUpButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onMoveUpButtonClicked" text="เลื่อนป้ายขึ้น" />
+            <Button fx:id="moveDownButton" layoutX="125.0" layoutY="14.0" mnemonicParsing="false" onAction="#onMoveDownButtonClicked" text="เลื่อนป้ายลง" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="stopTable" prefHeight="200.0" prefWidth="576.0">
+        <columns>
+          <TableColumn fx:id="orderColumn" prefWidth="127.0" text="ป้ายที่" />
+          <TableColumn fx:id="stopColumn" prefWidth="472.0" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="60.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="backButton" layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackButtonHandler" text="ย้อนกลับ" />
+            <Button fx:id="mainMenuButton" layoutX="253.0" layoutY="14.0" mnemonicParsing="false" onAction="#onMainMenuButtonHandler" text="กลับหน้าหลัก" />
+            <Button layoutX="510.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSubmitButtonClicked" text="ยืนยัน" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
